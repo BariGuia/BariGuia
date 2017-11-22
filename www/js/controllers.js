@@ -106,7 +106,7 @@ angular.module('starter.controllers', [])
                                               //farmacias
                                               $scope.data=MyService.getArrayFarma();
                                               angular.forEach($scope.data.marcadores, function(value, key){
-                                              var icono="../img/farmacia_roja.png";
+                                              var icono="../img/farmacia_rojo.png";
                                               
                                               //Verifica si esta entre el horario y cambia el icono
                                               
