@@ -16,7 +16,7 @@ angular.module('starter.controllers', [])
 
 
 
-.controller('MenuCtrl', function($scope,MyService,$http,$cordovaGeolocation) {
+.controller('MenuCtrl', function($scope,MyService,$http,$cordovaGeolocation,$filter) {
 
   $scope.myFunc = function(e) {
         MyService.setProperty(e);
@@ -31,17 +31,37 @@ angular.module('starter.controllers', [])
       alert("Por favor enciende el GPS")
 
     })
-
+    //Carga bares
     if(MyService.setArray()==null){
     $http.get('js/markers.json').then(function(response){
     MyService.setArray(response.data);
             })}
-
+    //Carga farmacias
     if(MyService.setArrayFarma()==null){
     $http.get('js/farmacias.json').then(function(response){
     MyService.setArrayFarma(response.data);
             })}
+    //Carga turno correspondiente
+    if(MyService.setArrayTurnos()==null){
+        hoy=new Date();
+        ayer=new Date();
+        ayer.setDate(ayer.getDate()-1);
+        ayer=$filter('date')(ayer,'dd-MM');
+      $http.get('js/turnos.json').then(function(response){
+        //ANtes de las 9 -> ayer
+        if ($filter('date')(hoy,'hh:ss')<"09:00")
+          day=ayer;
+        else
+          //del dia
+          day=$filter('date')(hoy,'dd-MM');
 
+        angular.forEach(response.data, function(value, key){
+          if (value.dia=day)
+              MyService.setArrayTurnos(value);
+        })
+    
+            })}
+      //Quedia es hoy?
     MyService.diaSemana();
   })  
 
@@ -113,9 +133,13 @@ angular.module('starter.controllers', [])
 
 
                                               if (MyService.estaAbierto(value.id)|| $scope.opcion==6){
-                                                
+                                                //ESta abierto?
                                                 if (MyService.estaAbierto(value.id)){
                                                   icono="../img/farmacia_verde.png";
+                                                }
+                                                //Esta de turno?
+                                                if (MyService.estaDeTurno(value.id)){
+                                                  icono="../img/farmacia_azul.png";
                                                 }
                                                 
                                                 //Setea marcador
