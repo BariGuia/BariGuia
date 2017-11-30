@@ -16,6 +16,9 @@
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.ionicframework.mapamenues197729"
         },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.mapamenues197729"
+        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.ionicframework.mapamenues197729"
         },

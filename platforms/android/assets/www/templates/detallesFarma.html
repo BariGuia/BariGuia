@@ -1,0 +1,52 @@
+<ion-view style="margin-top:6%; height: 100%">
+    
+      
+<br>
+      <div id="detalleFarma" class="animateText">
+
+        <u>{{item.nombre}}</u>
+        <p>Tel: {{item.telefono}}</p>
+        Direccion: {{item.direccion}}
+        <br>
+        <p>Horarios</p>
+        <p>Lunes a viernes
+        <br>De {{item.horario.lv[0].start1}} a {{item.horario.lv[1].end1}} y de {{item.horario.lv[2].start2}} a {{item.horario.lv[3].end2}}</p>
+
+        <p>Sabados
+        <br> De {{item.horario.s[0].start1}} a {{item.horario.s[1].end1}} y de {{item.horario.s[2].start2}} a {{item.horario.s[3].end2}}</p>
+        <p>Domingos
+        <br> De {{item.horario.d[0].start1}} a {{item.horario.d[1].end1}} y de {{item.horario.d[2].start2}} a {{item.horario.d[3].end2}}</p>
+        <!--
+<button icon="ion-social-facebook-outline"></button>
+<button icon="ion-map"></button>
+<button icon="ion-clipboard"></button>
+<button icon="ion-ios-book-outline"></button>
+-->
+      </div>
+      <ion-content>
+            <div id="mapa" style="top: 50%; height:50%; margin-bottom: 25px; filter:grayscale(90%);-webkit-filter:grayscale(90%);"></div>
+      </ion-content>
+  </ion-view>
+<!--
+<div class="list" style="top:6%;height: 89%">
+
+  <a href="#/app/mapa" >
+  <div class="background1" ng-click="myFunc(1)" title="Cervecerias" />  
+    <div class="textmenu">
+    <p>Cervecerias</p></div></div>
+  </a>
+
+  <a href="#/app/mapa" >
+  <div class="background2" ng-click="myFunc(2)" title="Bares" />  
+    <div class="textmenu">
+    <p>Bares</p></div></div>
+  </a>
+
+  <a href="#/app/mapa" >
+  <div class="background3" ng-click="myFunc(0)" title="Pubs, Bares y Cervecerias" />  
+    <div class="textmenu">
+    <p>Pubs, Bares y Cervecerias</p></div></div>
+  </a>
+  
+</div>
+-->
