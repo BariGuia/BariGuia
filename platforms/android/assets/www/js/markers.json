@@ -338,9 +338,11 @@
         	"lat": -41.1337708,  
         	"lng": -71.3149442,
 			"iconMarKer": "img/glass.png",
-			"logo":"img/Imagenes/wilkennylogo.jpg",
+			"logo":"img/Imagenes/Wilkennylogo.jpg",
 			"image": [
-				{"imagen":"img/Imagenes/wilkennylogo.jpg"}
+				{"imagen":"img/Imagenes/Wilkennylogo.jpg"},
+				{"imagen":"img/Imagenes/Wilkenny1.jpg"},
+				{"imagen":"img/Imagenes/Wilkenny2.jpg"}
 			]
       	},
     	{
