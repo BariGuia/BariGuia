@@ -126,20 +126,20 @@ angular.module('starter.controllers', [])
                                               //farmacias
                                               $scope.data=MyService.getArrayFarma();
                                               angular.forEach($scope.data.marcadores, function(value, key){
-                                              var icono="../img/farmacia_rojo.png";
+                                              var icono="img/farmacia_rojo.png";
                                               
                                               //Verifica si esta entre el horario y cambia el icono
                                               
 
 
-                                              if (MyService.estaAbierto(value.id)|| $scope.opcion==6){
+                                              if (MyService.estaAbierto(value.id)|| $scope.opcion==6||MyService.estaDeTurno(value.id)){
                                                 //ESta abierto?
                                                 if (MyService.estaAbierto(value.id)){
-                                                  icono="../img/farmacia_verde.png";
+                                                  icono="img/farmacia_verde.png";
                                                 }
                                                 //Esta de turno?
                                                 if (MyService.estaDeTurno(value.id)){
-                                                  icono="../img/farmacia_azul.png";
+                                                  icono="img/farmacia_azul.png";
                                                 }
                                                 
                                                 //Setea marcador

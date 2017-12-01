@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ionicframework.mapamenues197729" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>BariHour</name>
+<widget id="com.ionicframework.mapamenues197729" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>BariGuia</name>
     <description>
         An Ionic Framework and Cordova project.
     </description>
@@ -15,13 +15,13 @@
     <preference name="SplashScreenDelay" value="2000" />
     <preference name="SplashScreen" value="none" />
     <preference name="FadeSplashScreenDuration" value="2000" />
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="18" />
     <preference name="BackupWebStorage" value="none" />
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
-    <preference name="android-minSdkVersion" value="14" />
-    <preference name="android-targetSdkVersion" value="14" />
+    <preference name="android-minSdkVersion" value="18" />
+    <preference name="android-targetSdkVersion" value="15" />
     <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-console" spec="~1.0.4" />
     <plugin name="cordova-plugin-device" spec="~1.1.3" />

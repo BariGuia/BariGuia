@@ -3,7 +3,7 @@
 		<ion-list>
 			<ion-item class="item-avatar" ng-repeat="x in data.marcadores"  href="#/app/detallesFarma" ng-click="detalle({{x.id}})">
 				<img class=" {{bounce(x.id) && 'beat animateImage'  || 'animateImage'}}" 
-					ng-src="{{bounce(x.id) && '../img/cruzAzul.png' || '../img/cruzRoja.png'}}">
+					ng-src="{{bounce(x.id) && 'img/cruzAzul.png' || 'img/cruzRoja.png'}}">
 				<div class="animateText">
 					<h2><b>{{x.nombre}}</b></h2>
 					{{x.direccion}}

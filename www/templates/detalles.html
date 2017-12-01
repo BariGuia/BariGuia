@@ -6,8 +6,10 @@
       <div id="detalle" class="animateText">
         <br><br>
         <u>{{item.name}}</u>
-        <p>{{item.telefono}}</p>
-        {{item.direccion}}
+        <p>{{item.horario}}</p>
+        {{item.direccion}}<br>
+        Happy hour de {{item.start|date:'HH'}} a {{item.end|date:'HH'}}
+
         <br>
         
         <!--
