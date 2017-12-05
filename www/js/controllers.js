@@ -49,15 +49,15 @@ angular.module('starter.controllers', [])
         ayer=$filter('date')(ayer,'dd-MM');
       $http.get('js/turnos.json').then(function(response){
         //ANtes de las 9 -> ayer
-        if ($filter('date')(hoy,'hh:ss')<"09:00")
+        if ($filter('date')(hoy,'H:ss')<"09:00")
           day=ayer;
         else
           //del dia
           day=$filter('date')(hoy,'dd-MM');
 
         angular.forEach(response.data, function(value, key){
-          if (value.dia=day)
-              MyService.setArrayTurnos(value);
+          if (value.dia==day){
+              MyService.setArrayTurnos(value);}
         })
     
             })}
